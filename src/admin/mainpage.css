@@ -1,0 +1,104 @@
+.main-container-mp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 0;
+  font-family: Poppins;
+  background: linear-gradient(to bottom, #0a7c9b, #0074e4);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container-mp {
+  background-color: white;
+  border-radius: 10px;
+  padding: 60px 40px;
+  text-align: center;
+  height: 60vh;
+  width: 800px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container-mp {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.main-logo-mp {
+  width: 150px;
+  height: 150px;
+}
+
+.main-title-mp {
+  margin-top: 70px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #053a87;
+}
+
+.main-subtitle-mp {
+  color: #555;
+  font-size: 16px;
+  margin: 30px 0 30px;
+}
+
+.role-buttons-mp {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.role-button-mp {
+  margin-top: 30px;
+  padding: 20px 70px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.role-button-mp:hover {
+  transform: translateY(-2px);
+}
+
+.student-btn {
+  background-color: #4299e1;
+  color: white;
+}
+
+.student-btn:hover {
+  background-color: #3182ce;
+}
+
+.admin-btn {
+  background-color: #053a87;
+  color: white;
+}
+
+.admin-btn:hover {
+  background-color: #4299e1;
+}
+
+@media (min-width: 640px) {
+  .role-buttons-mp {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .role-button-mp {
+    min-width: 180px;
+  }
+}

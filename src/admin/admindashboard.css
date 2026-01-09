@@ -1,0 +1,441 @@
+.dash-wrapper {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.dash-container {
+  background-color: #ffffff;
+  border: 1px solid #f9f9f9;
+  height: 95vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #c8c7c7;
+  box-shadow: 0 4px 6px #f5f5f5; 
+  padding: 30px 25px;
+}
+
+.dash-title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Main content layout */
+.dash-main-content {
+  display: flex;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.dash-chart-container {
+  flex: 3;
+  margin-right: 20px;
+}
+
+.dash-side-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Date and time styles */
+.dash-date-time {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 18vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.dash-date {
+  font-size: 20px;
+  color: #555;
+  margin-top: 12px;
+  text-align: right;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.dash-time {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  margin-right: 10px;
+  line-height: 1;
+}
+
+.dash-seconds {
+  font-size: 24px;
+  color: #777;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+/* Total students styles */
+.dash-total-students {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 18.2vh;
+}
+
+.dash-student-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-student-label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.dash-student-icon-count {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dash-user-icon {
+  font-size: 24px;
+  color: #333;
+}
+
+.dash-student-count {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Chart section styles */
+.dash-chart-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dash-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dash-chart-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.dash-chart-filters {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.dash-filter-option {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.dash-filter-active {
+  font-weight: 500;
+  color: #333;
+}
+
+.dash-filter-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #1E88E5;
+  margin-right: 5px;
+}
+
+.dash-dropdown-arrow {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+/* Year dropdown styles */
+.dash-year-dropdown {
+  position: relative;
+}
+
+.dash-year-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 100px;
+}
+
+.dash-year-option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dash-year-option:hover {
+  background-color: #f5f5f5;
+}
+
+.dash-chart {
+  height: 200px;
+  position: relative;
+}
+
+.dash-line-chart {
+  display: flex;
+  height: 100%;
+}
+
+.dash-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10px;
+  width: 40px;
+  text-align: right;
+}
+
+.dash-y-label {
+  font-size: 12px;
+  color: #999;
+}
+
+.dash-chart-content {
+  position: relative;
+  flex: 1;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.dash-chart-svg {
+  width: 100%;
+  height: 150px;
+}
+
+.dash-x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.dash-x-label {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  width: 16.66%;
+}
+
+.dash-year-marker {
+  position: absolute;
+  width: 30px;
+  background: linear-gradient(to bottom, rgba(200, 200, 255, 0.5), rgba(200, 200, 255, 0));
+  bottom: 25px;
+}
+
+/* Demographics row styles (for gender and age charts) */
+.dash-demographics-row {
+  display: flex;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.dash-gender-section, .dash-age-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
+
+.dash-section-title {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.dash-gender-content {
+  display: flex;
+  align-items: center;
+  height: 18vh;
+}
+
+.dash-gender-info {
+  flex: 1;
+}
+
+.dash-gender-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.dash-gender-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dash-gender-dot.female {
+  background-color: #FF4081;
+}
+
+.dash-gender-dot.male {
+  background-color: #1E88E5;
+}
+
+.dash-gender-label {
+  flex: 1;
+  font-size: 16px;
+  color: #555;
+}
+
+.dash-gender-count {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dash-gender-chart {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dash-donut-chart {
+  width: 120px;
+  height: 120px;
+}
+
+.dash-donut-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dash-donut-text {
+  font-size: 16px;
+  font-weight: bold;
+  fill: #333;
+}
+
+.dash-age-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dash-age-range {
+  display: flex;
+  align-items: center;
+}
+
+.dash-age-label {
+  width: 50px;
+  font-size: 14px;
+  color: #555;
+}
+
+.dash-age-bar-container {
+  flex: 1;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dash-age-bar {
+  height: 100%;
+  background-color: #1E88E5;
+  border-radius: 5px;
+}
+
+/* Loading and Error States */
+.dash-loading,
+.dash-error {
+  padding: 24px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.dash-error {
+  color: #d32f2f;
+}
+.dash-age-count{
+  color: #030303;
+  font-size: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .dash-main-content {
+    flex-direction: column;
+  }
+  
+  .dash-chart-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .dash-side-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .dash-date-time, .dash-total-students {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .dash-demographics-row {
+    flex-direction: column;
+  }
+  
+  .dash-side-content {
+    flex-direction: column;
+  }
+  
+  .dash-chart {
+    height: 150px;
+  }
+}

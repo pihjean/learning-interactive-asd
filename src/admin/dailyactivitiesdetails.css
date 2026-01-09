@@ -1,0 +1,457 @@
+/* DailyActivitiesDetails component - combines daily lessons and activities styles */
+
+/* Base container styles */
+.da-wrapper {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  .da-content {
+    background-color: #ffffff;
+    border: 1px solid #f9f9f9;
+    height: 95vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header styles */
+  .da-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #c8c7c7;
+    box-shadow: 0 4px 6px #f5f5f5;
+    padding: 20px 25px;
+  }
+  
+  .da-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .da-nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    transition: color 0.3s;
+  }
+  
+  .da-nav-button:hover {
+    color: #333;
+  }
+  
+  .da-navigation h2 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Tab navigation styles */
+  .da-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 30px;
+  }
+  
+  .da-tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+  
+  .da-tab:hover {
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .da-tab.active {
+    color: #0056b3;
+    border-bottom: 3px solid #0056b3;
+    font-weight: 500;
+  }
+  
+  /* Controls styles */
+  .da-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    width: 100%;
+  }
+  
+  .da-control-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Table container styles */
+  .da-table-container {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #c8c7c7;
+    margin: 0 30px;
+    height: 65vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Custom scrollbar styling */
+  .da-table-container::-webkit-scrollbar {
+    height: 3px; /* height for horizontal scrollbar */
+    width: 8px; /* width for vertical scrollbar */
+  }
+  
+  .da-table-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* track color */
+    border-radius: 10px;
+  }
+  
+  .da-table-container::-webkit-scrollbar-thumb {
+    background: #ccc; /* thumb color */
+    border-radius: 3px;
+  }
+  
+  .da-table-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* thumb color on hover */
+  }
+  
+  /* Table styles */
+  .da-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .da-table th {
+    background-color: #f9f9f9;
+    font-weight: 500;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    font-size: 13px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .da-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    font-size: 12px;
+  }
+  
+  .da-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Button styles */
+  .filter-dropdown-container {
+    position: relative;
+  }
+  
+  .filter-dropdown-button,
+  .pdf-button,
+  .excel-button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+  
+  .filter-dropdown-button:hover,
+  .pdf-button:hover,
+  .excel-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .pdf-button {
+    background-color: #f44336;
+    color: white;
+    border-color: #f44336;
+  }
+  
+  .pdf-button:hover {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+  }
+  
+  .excel-button {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+  }
+  
+  .excel-button:hover {
+    background-color: #388E3C;
+    border-color: #388E3C;
+  }
+  
+  .filter-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    min-width: 150px;
+  }
+  
+  .filter-option {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .filter-option:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* View button styles */
+  .view-button {
+    background: none;
+    border: none;
+    color: #0056b3;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    transition: color 0.3s;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .view-button:hover {
+    color: #003d82;
+    background-color: rgba(0, 86, 179, 0.1);
+  }
+  
+  /* Action button container */
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  /* Loading and error states */
+  .da-loading, 
+  .da-error {
+    padding: 30px;
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .da-error {
+    color: #f44336;
+  }
+  
+  /* Confirmation modal styles */
+  .student-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .confirm-modal-container {
+    background-color: white;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .confirm-modal-header {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .confirm-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .confirm-modal-content {
+    padding: 20px;
+  }
+  
+  .confirm-modal-content p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .confirm-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .cancel-button,
+  .confirm-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cancel-button {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #333;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .confirm-button {
+    background-color: #0056b3;
+    border: 1px solid #0056b3;
+    color: white;
+  }
+  
+  .confirm-button:hover {
+    background-color: #003d82;
+  }
+  
+  /* Search input styles */
+  .search-container {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .da-table th,
+    .da-table td {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .da-navigation {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .da-navigation h2 {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .da-controls {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .search-container {
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    .da-control-buttons {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .da-tabs {
+      padding: 0 15px;
+    }
+    
+    .da-tab {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .da-wrapper {
+      padding: 10px;
+    }
+    
+    .da-header {
+      padding: 15px;
+    }
+    
+    .da-navigation h2 {
+      font-size: 16px;
+    }
+    
+    .da-table-container {
+      margin: 0 15px;
+    }
+    
+    .filter-dropdown-button,
+    .pdf-button,
+    .excel-button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }

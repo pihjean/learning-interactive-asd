@@ -1,0 +1,171 @@
+.settings__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .settings__modal {
+    background: #e7f9fd;
+    border-radius: 15px;
+    width: 35%;
+    height: 55%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: slideIn 0.3s ease;
+    border: 2px solid rgba(0, 120, 168, 0.2);
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .settings__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(0, 120, 168, 0.2);
+  }
+  
+  .settings__title {
+    font-size: 36px;
+    color: #0078a8;
+    margin: 0;
+    margin-left: 50px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .settings__close-btn {
+    background: none;
+    border: none;
+    color: #0078a8;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .settings__close-btn:hover {
+    transform: rotate(90deg);
+  }
+  
+  .settings__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .settings__option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .settings__option-label {
+    font-size: 24px;
+    color: #0078a8;
+    font-weight: 600;
+  }
+  
+  .settings__slider {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background: #b3e5fc;
+    outline: none;
+  }
+  
+  .settings__slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #0078a8;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .settings__slider::-webkit-slider-thumb:hover {
+    background: #00557a;
+  }
+  
+  .settings__logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #004aad;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .settings__logout-btn:hover {
+    background: #003a94;
+    transform: translateY(-3px);
+  }
+  
+  .settings__logout-icon {
+    font-size: 35px;
+  }
+  /* Add these styles to your Settings.css file */
+
+.settings__option-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings__toggle-btn {
+  background: none;
+  border: none;
+  color: #0078a8;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.settings__toggle-btn:hover {
+  color: #00557a;
+  transform: scale(1.1);
+}
+
+/* Add styles for disabled slider */
+.settings__slider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.settings__slider:disabled::-webkit-slider-thumb {
+  background: #b3b3b3;
+  cursor: not-allowed;
+}

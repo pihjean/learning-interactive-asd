@@ -1,0 +1,264 @@
+.unique__container {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Comic Sans MS', cursive;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Splash screen */
+.unique__splash {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.unique__splash-subtitle {
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 1px;
+}
+.unique__splash-title {
+  font-size: 2.5rem;
+  color: #2196f3;
+  margin-bottom: 20px;
+}
+
+.unique__chibi-animation {
+  width: 150px;
+  height: auto;
+  animation: float 2s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.unique__play-button {
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unique__play-button:hover {
+  background-color: #1769aa;
+}
+
+.unique__login-wrapper {
+  background-image: url('/src/assets/bgimg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d47a1; 
+}
+
+
+/* Login Box */
+.unique__login-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.unique__login-header {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #b3e5fc;
+  padding: 10px 10px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #0277bd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.unique__icon-container {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.unique__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #0d47a1;
+}
+
+.unique__input {
+  padding: 12px;
+  border-radius: 25px;
+  border: 2px solid #4dd0e1;
+  width: 94%;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 30px;
+  text-align: center;
+  box-shadow: 0px 3px 8px rgba(0, 188, 212, 0.3);
+  background-color: #ffffff;
+  color: #0d47a1;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+/* Error message style */
+.unique__message {
+  color: #f44336;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(244, 67, 54, 0.1);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.unique__login-button {
+  background-color: #0d47a1;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(13, 71, 161, 0.3);
+  transition: background 0.3s ease;
+}
+
+.unique__login-button:hover {
+  background-color: #1565c0;
+}
+
+/* Disable state for button */
+.unique__login-button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.slide-out {
+  animation: slideOut 1s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+/* Add this to your StudentLogin.css file - Dropdown styled to match your existing input */
+
+.unique__dropdown {
+  padding: 12px;
+  border-radius: 25px;
+  border: 2px solid #4dd0e1;
+  width: 94%;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 30px;
+  text-align: center;
+  box-shadow: 0px 3px 8px rgba(0, 188, 212, 0.3);
+  background-color: #ffffff;
+  color: #0d47a1;
+  font-family: 'Comic Sans MS', cursive;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Custom dropdown arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23%230d47a1' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 25px;
+  padding-right: 50px;
+}
+
+.unique__dropdown:focus {
+  border-color: #0277bd;
+  box-shadow: 0px 3px 12px rgba(0, 188, 212, 0.5);
+}
+
+.unique__dropdown:hover {
+  border-color: #0277bd;
+  box-shadow: 0px 3px 10px rgba(0, 188, 212, 0.4);
+}
+
+.unique__dropdown:disabled {
+  background-color: #f5f5f5;
+  color: #b0bec5;
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-color: #b0bec5;
+  box-shadow: none;
+}
+
+.unique__dropdown option {
+  padding: 15px;
+  font-size: 18px;
+  background-color: white;
+  color: #0d47a1;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.unique__dropdown option:hover,
+.unique__dropdown option:focus {
+  background-color: #e0f7fa;
+}
+
+/* Style for the first placeholder option */
+.unique__dropdown option:first-child {
+  color: #81c784;
+  font-style: italic;
+}

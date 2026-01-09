@@ -1,0 +1,301 @@
+.daily-lesson-wrapper {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.daily-lesson-container {
+  background-color: #ffffff;
+  border: 1px solid #f9f9f9;
+  height: 95vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.daily-lesson-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #c8c7c7;
+  box-shadow: 0 4px 6px #f5f5f5; 
+  padding: 20px 25px;
+}
+
+.daily-lesson-title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.daily-lesson-total {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 10px;
+}
+
+.daily-lesson-total-label {
+  font-size: 26px;
+  color: #666;
+}
+
+.daily-lesson-total-number {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.daily-lesson-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  width: 100%;
+}
+
+.daily-lesson-search {
+  flex: 1;
+  max-width: 400px;
+}
+
+.daily-lesson-search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  font-family: poppins;
+}
+
+.daily-lesson-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.daily-lesson-filter-container {
+  position: relative;
+  display: inline-block;
+}
+
+.daily-lesson-pdf-btn,
+.daily-lesson-excel-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.daily-lesson-pdf-btn {
+  color: #d93025;
+}
+
+.daily-lesson-excel-btn {
+  color: #1f7244;
+}
+.daily-lesson-filter-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #333;
+}
+.daily-lesson-filter-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 150px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.daily-lesson-filter-option {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+}
+
+.daily-lesson-filter-option:hover {
+  background-color: #f5f5f5;
+}
+
+.daily-lesson-table-container {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #c8c7c7;
+  margin-left: 30px;
+  margin-right: 30px;
+  height: 65vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+  /* Custom scrollbar styling */
+  .daily-lesson-table-container::-webkit-scrollbar {
+    height: 3px; /* height for horizontal scrollbar */
+    width: 3px;
+  }
+  
+  .daily-lesson-table-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* track color */
+    border-radius: 10px;
+  }
+  
+  .daily-lesson-table-container::-webkit-scrollbar-thumb {
+    background: #f1f1f1; /* thumb color */
+    border-radius: 3px;
+  }
+  
+  .daily-lesson-table-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* thumb color on hover */
+  }
+
+.daily-lesson-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.daily-lesson-table th {
+  background-color: #f9f9f9;
+  font-weight: 800;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.daily-lesson-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  color: #666;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.daily-lesson-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.daily-lesson-view-button {
+  background: none;
+  border: none;
+  color: #0056b3;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Export Modal Styles */
+.export-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.export-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.export-modal h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.export-modal p {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.export-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.export-modal-cancel,
+.export-modal-confirm {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.export-modal-cancel {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.export-modal-confirm {
+  background-color: #4285f4;
+  border: 1px solid #4285f4;
+  color: white;
+}
+
+.export-modal-cancel:hover {
+  background-color: #e5e5e5;
+}
+
+.export-modal-confirm:hover {
+  background-color: #3367d6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .daily-lesson-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .daily-lesson-search {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .export-modal {
+    width: 90%;
+    max-width: 400px;
+  }
+}

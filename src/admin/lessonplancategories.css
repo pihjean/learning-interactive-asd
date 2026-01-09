@@ -1,0 +1,71 @@
+.lesson-plan-categories-wrapper {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  .lesson-plan-categories-wrapper .lesson-plan-content {
+    background-color: #ffffff;
+    border: 1px solid #f9f9f9;
+    height: 95vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Override some styles from LessonPlan.css */
+  .lesson-plan-categories-wrapper .lesson-plan-header {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .lesson-plan-categories-wrapper .lesson-plan-category-title {
+    color: #2196F3;
+    font-weight: bold;
+  }
+  
+  .lesson-plan-categories-wrapper .lesson-plan-items-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Custom styles for this component */
+  .lesson-plan-categories-wrapper .lesson-plan-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  
+  .lesson-plan-categories-wrapper .lesson-plan-nav-header .lesson-plan-header-title {
+    flex: 1;
+    text-align: center;
+    margin-right: 40px; /* Balance the back button space */
+  }
+  
+  /* Style adjustments for modals */
+  .lesson-plan-categories-wrapper .confirm-modal {
+    border-radius: 10px;
+  }
+  
+  .lesson-plan-categories-wrapper .confirm-modal-header {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .lesson-plan-categories-wrapper .confirm-modal-header h3 {
+    color: white;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .lesson-plan-categories-wrapper {
+      padding: 10px;
+    }
+    
+    .lesson-plan-categories-wrapper .lesson-plan-item {
+      padding: 12px 15px;
+    }
+  }

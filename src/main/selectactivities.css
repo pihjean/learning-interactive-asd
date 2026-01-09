@@ -1,0 +1,191 @@
+.selectactivities__container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #89e5f0, #ffffff);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .selectactivities__header {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px;
+    background-color: none;
+    height: 50px;
+  }
+  
+  .header-title {
+    color: #0046a5 !important;
+    font-size: 30px !important; 
+    font-weight: 500;
+  }
+  
+  .selectactivities__back-button,
+  .selectactivities__settings-button {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .back-icon {
+    color: #fff;
+    background-color: #0046a5;
+    padding: 8px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .selectactivities__back-button:hover .back-icon {
+    transform: translateX(-5px);
+    background-color: #003a94;
+  }
+  
+  .selectactivities__back-label {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #0046a5;
+    font-weight: 500;
+  }
+  
+  .settings-icon {
+    color: #0046a5;
+    background-color: #e0f7fc;
+    padding: 8px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .selectactivities__settings-button:hover .settings-icon {
+    transform: rotate(90deg);
+    background-color: #c5e8f0;
+  }
+  
+  .selectactivities__settings-label {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #0046a5;
+    font-weight: 500;
+  }
+  
+  .selectactivities__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .selectactivities__title-container {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px 60px;
+    margin-bottom: 30px;
+  }
+  
+  .selectactivities__title {
+    font-size: 32px;
+    color: #0046a5;
+    margin: 0;
+  }
+  
+  .selectactivities__activities-container {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 40px;
+    width: 80%;
+    max-width: 800px;
+    height: 60vh;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+  }
+  
+  .selectactivities__activities-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .selectactivities__row {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  
+  .selectactivities__activity-button {
+    color: #fff;
+    border: none;
+    padding: 1px 50px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    width: 350px;
+    margin-top: 7px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .activity-icon {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+  
+  .selectactivities__activity-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
+    clip-path: inherit;
+    z-index: 1;
+  }
+  
+  .selectactivities__activity-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+    clip-path: polygon(5% 0, 15% 0, 5% 10%);
+    z-index: 2;
+  }
+  
+  .selectactivities__activity-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .selectactivities__activities-grid {
+      gap: 20px;
+    }
+    
+    .selectactivities__row {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .selectactivities__activity-button {
+      width: 180px;
+    }
+  }

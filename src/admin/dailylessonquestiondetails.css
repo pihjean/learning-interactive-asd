@@ -1,0 +1,202 @@
+/* Daily Lesson Question specific styles that extend student list styles */
+.daily-question-wrapper {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.daily-question-content {
+  background-color: #ffffff;
+  border: 1px solid #f9f9f9;
+  height: 95vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.daily-question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #c8c7c7;
+  box-shadow: 0 4px 6px #f5f5f5; 
+  padding: 15px 20px;
+}
+
+.daily-question-navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.daily-question-nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+.daily-question-navigation h2 {
+  margin: 0;
+  flex-grow: 1;
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+}
+
+.daily-question-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  width: 100%;
+}
+
+.daily-question-control-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.daily-question-table-container {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #c8c7c7;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 50px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar styling */
+.daily-question-table-container::-webkit-scrollbar {
+  height: 3px; /* height for horizontal scrollbar */
+}
+
+.daily-question-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 10px;
+}
+
+.daily-question-table-container::-webkit-scrollbar-thumb {
+  background: #f1f1f1; /* thumb color */
+  border-radius: 3px;
+}
+
+.daily-question-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* thumb color on hover */
+}
+
+.daily-question-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.daily-question-table th {
+  background-color: #f9f9f9;
+  font-weight: 800;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.daily-question-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  color: #666;
+}
+
+.daily-question-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Status styles */
+.status-correct {
+  background-color: #e8f5e9;
+}
+
+.status-correct:hover {
+  background-color: #d7eedc;
+}
+
+.status-wrong {
+  background-color: #ffebee;
+}
+
+.status-wrong:hover {
+  background-color: #ffdde0;
+}
+
+.status-na {
+  background-color: #f5f5f5;
+}
+
+.status-na:hover {
+  background-color: #eeeeee;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status-correct .status {
+  color: #2e7d32;
+}
+
+.status-wrong .status {
+  color: #c62828;
+}
+
+.status-na .status {
+  color: #757575;
+}
+
+/* Styles for incorrect answers */
+.incorrect-answer td:nth-child(3) {
+  color: #e74c3c;
+}
+
+/* Loading and error styles */
+.daily-question-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+}
+
+.daily-question-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #d32f2f;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .daily-question-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .search-container {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

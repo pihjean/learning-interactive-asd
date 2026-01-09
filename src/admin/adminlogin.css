@@ -1,0 +1,114 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 0;
+    font-family: Poppins;
+    background: linear-gradient(to bottom, #0a7c9b, #0074e4);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-card {
+    margin-top: 40px;
+    background-color: white;
+    padding: 50px 80px;
+    border-radius: 10px;
+    position: relative;
+    width: 550px;
+    height: 60vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo-container-log {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 50%;
+    padding: 15px;
+  }
+  
+  .logo-log {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #053a87;
+    font-family: Poppins;
+  }
+  
+  .login-form {
+    margin-top: 20px;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-group .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: gray;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #222;
+    background-color: #ffff;
+    font-family: poppins;
+  }
+
+  
+  .toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #074eb8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .login-button:hover {
+    background-color: #053a87;
+  }
+  /* Add this to your existing adminlogin.css file if not already present */
+.error-message {
+  color: #d9534f;
+  background-color: rgba(217, 83, 79, 0.1);
+  border: 1px solid rgba(217, 83, 79, 0.2);
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
